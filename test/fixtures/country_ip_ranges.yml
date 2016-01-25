@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table country_name: country_ip_ranges
+#
+#  id                   :integer          not null, primary key
+#  country_country_name :string           not null
+#  short_country_name   :string
+#  from_ip              :integer          not null
+#  to_ip                :integer          not null
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+ru:
+  country_name: Russia
+  short_country_name: RU
+  from_ip: 94.125.52.0
+  to_ip: 94.125.53.255
+
+us:
+  country_name: United States
+  short_country_name: US
+  from_ip: 23.20.0.0
+  to_ip: 23.23.255.255
