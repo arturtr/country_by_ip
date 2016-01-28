@@ -6,7 +6,7 @@
 
 ## API methods
 
-GET responce to path
+GET response to path
 ```
 /api/country_by_ip?ip=123.123.123.123
 ```
