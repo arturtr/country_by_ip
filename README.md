@@ -1,24 +1,32 @@
-## README
+# Country by IP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirements
 
-Things you may want to cover:
+* PostgreSQL database
 
-* Ruby version
+## API methods
 
-* System dependencies
+GET responce to path
+```
+/api/country_by_ip?ip=123.123.123.123
+```
 
-* Configuration
+will return country name in JSON format
+```json
+{
+  country: "China",
+  ip: "123.123.123.123"
+}
+```
 
-* Database creation
+## CRON
 
-* Database initialization
+For add monthly IP database update to CRON run
+```
+whenever -w
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+For remove this task from CRON run
+```
+whenever -c
+```
