@@ -18,12 +18,13 @@ ActiveRecord::Schema.define(version: 20160125020453) do
 
   create_table "country_ip_ranges", force: :cascade do |t|
     t.string   "country_name",       null: false
-    t.string   "short_country_name"
+    t.string   "country_short_name"
     t.inet     "from_ip",            null: false
     t.inet     "to_ip",              null: false
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.index ["from_ip", "to_ip"], name: "index_country_ip_ranges_on_from_ip_and_to_ip", using: :btree
+    t.index ["to_ip"], name: "index_country_ip_ranges_on_to_ip", using: :btree
   end
 
 end
