@@ -12,7 +12,7 @@ GET responce to path
 ```
 
 will return country name in JSON format
-```json
+```ruby
 {
   country: "China",
   ip: "123.123.123.123"
