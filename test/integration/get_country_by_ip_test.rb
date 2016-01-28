@@ -8,7 +8,7 @@ class GetCountryByIpTest < ActionDispatch::IntegrationTest
     assert_includes @response.body, 'Russia'
   end
 
-  test 'should render not found if not found country by ip' do
+  test "should render not found if didn't find country by ip" do
     ip = '105.125.52.11'
     get "/api/country_by_ip?ip=#{ip}"
     assert_response :missing
